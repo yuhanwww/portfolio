@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+    font-family:"Calibri", sans-serif;
+}
+
+body {
+    background: rgb(189, 208, 210);
+    color: black;
+    overflow: hidden;
+    overflow-y: scroll;
+}
