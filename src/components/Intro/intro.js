@@ -1,20 +1,40 @@
-import React from 'react';
+import React, { useState } from "react"; 
+import { Link } from 'react-scroll'; 
 import './intro.css';
-import profileImg from '../../assets/profile.png';
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
-// import { Link } from 'react-scroll'; 
 
+import Tabs from '../../components/Tabs/tabs'
+
+import profileImg from '../../assets/profile.png';
+import emailIcon from '../../assets/icons/emailIcon.svg';
+import linkedinIcon from '../../assets/icons/linkedinIcon.svg';
+import githubIcon from '../../assets/icons/githubIcon.svg';
+import cvIcon from '../../assets/icons/cvIcon.svg';
 
 const Intro = () => {
+  const [value, setValue] = useState('1');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <section id="intro">
       <div className="introContent">
-        <span className="hi">Hi<br/></span>
-        <span className="introText">I'm <span className="introName">Yuhan Wang</span></span>
-        <p className="introPara">junior at Smith College,<br/> majoring Art History & Computer Science.</p>
+        <div className="column left">
+          <img src={profileImg} alt="profile" className='introImg'/>
+          <div className="socialIcons">
+            <Link type='email' onClick={() => { window.location.href = 'ywang70@smith.edu'; } }><img src={emailIcon} alt='email' className="socialIcon" /></Link>
+            <Link type='linkedin' onClick={() => window.open('https://www.linkedin.com/in/yuhan-wang-yw/', '_blank', 'noopener,noreferrer')}><img src={linkedinIcon} alt='LinkedIn'className="socialIcon" /></Link>
+            <Link type='github' onClick={() => window.open('https://github.com/yuhanwww', '_blank', 'noopener,noreferrer')}><img src={githubIcon} alt='Github' className="socialIcon" /></Link>
+            <Link type='resume'><img src={cvIcon} alt='CV' className="socialIcon" /></Link>
+          </div>
+        </div>
+        <div className='column right'>
+          <Tabs />
+        </div>
+
+        
       </div>
-      <img src={profileImg} alt="profile" className='bg'/>
     </section>
   )
 }

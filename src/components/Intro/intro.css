@@ -19,47 +19,44 @@
 .introContent{
     height: 70vh;
     width: 100vw;
-    padding: 2rem;
-    font-size: 3rem;
+    padding: 7px;
+
     /* font-weight: 700; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.hi{
-    font-size: 1.75rem;
-    font-weight: 100;
-}
- 
-.introName{
-    color: rgb(2, 64, 49);
+.introImg {
+    height: 200px;
 }
 
-.introPara{
-    padding-top: 7px;
-    font-size: medium;
-    font-weight: 300;
-    letter-spacing: 1px;
+.column {
+    float: none;
+    padding: 20px;
 }
 
-.btn{
-    background: white;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem;
+.left {
+    width: 30%;
 }
 
-.btnImg{
-    object-fit: cover;
-    margin: 0 0.25rem;
-    height: 1rem;
-
+.right {
+    width: 70%;
 }
 
-@media screen and (max-width:480px){
-    .bg{
-        right: -20vw;
+.socialIcons {
+    padding: 12px 0;
+}
+
+.socialIcon {
+    height: 50px;
+    width: 50px;
+    padding: 0 12px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
     }
 }
