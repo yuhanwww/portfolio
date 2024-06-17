@@ -1,32 +1,64 @@
-import React, { useState } from 'react';
 
-const Tabs = () => {
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Tab from './tab.js';
+import './tabs.css';
 
-    const tabs = ['Intro','Academic','Other'];
-    const [activeTab, setActiveTab] = useState(tabs[0]);
+class Tabs extends Component {
+  static propTypes = {
+    children: PropTypes.instanceOf(Array).isRequired,
+  }
 
-    const handleTabClick = (tab) => {
-        setActiveTab(tab);
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeTab: this.props.children[0].props.label,
     };
+  }
+
+  onClickTabItem = (tab) => {
+    this.setState({ activeTab: tab });
+  }
+
+  render() {
+    const {
+      onClickTabItem,
+      props: {
+        children,
+      },
+      state: {
+        activeTab,
+      }
+    } = this;
 
     return (
         <div>
-            <ul className="tab">
-            {tabs.map((tab, index) => (
-                <li
-                    key={index}
-                    className={`tab-item ${activeTab === tab ? 'active' : ''}`}
-                    onClick={() => handleTabClick(tab)}
-                >
-                    {tab}
-                </li>
-            ))}
-            </ul>
-            <div className="tabcontent">
-                <p>{`This is the content for ${activeTab}.`}</p>
+            <div className='tab'>
+                <ol>
+                {children.map((child) => {
+                    const { label } = child.props;
+
+                    return (
+                    <Tab
+                        activeTab={activeTab}
+                        key={label}
+                        label={label}
+                        onClick={onClickTabItem}
+                    />
+                    );
+                })}
+                </ol>
             </div>
-        </div>
-    )
+            <div className="tabcontent">
+            {children.map((child) => {
+                if (child.props.label !== activeTab) return undefined;
+                return child.props.children;
+            })}
+            </div>
+      </div>
+    );
+  }
 }
 
 export default Tabs;

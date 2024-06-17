@@ -26,14 +26,14 @@
 .desktopMenuListItem:hover {
     color: rgb(90,133,144);
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid rgb(2, 64, 49);
+    border-bottom: 3px solid rgb(90,138,144);
 }
 
 .desktopMenuButton {
     /* background: white ; */
     /* color: black; */
     border: 1;
-    border-color: rgb(2, 64, 49);
+    border-color: rgb(90,138,144);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,8 +49,8 @@
 }
 
 .active{
-    color: rgb(90,133,144);
+    color: rgb(90,138,144);
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid rgb(90,133,144);
+    border-bottom: 3px solid rgb(90,138,144);
 
 }
