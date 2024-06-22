@@ -4,12 +4,12 @@
     box-sizing: border-box;
     text-decoration: none;
     background: transparent;
-    font-family:"Calibri", sans-serif;
 }
 
 body {
-    background: rgb(169,192,195);
-    color: black;
+    background: var(--bg);
+    color: var(--text);
     overflow: hidden;
     overflow-y: scroll;
+    font-family:var(--text-font-content);
 }

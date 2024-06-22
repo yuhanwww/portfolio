@@ -1,9 +1,10 @@
 
 .tab {
     overflow: hidden;
-    border: 2px solid rgb(90,138,144);
-    border-radius: 25px;
+    border: 2px solid var(--title);
+    border-radius: 20px;
     text-align: center;
+    font-family: var(--text-font-title);
 }
   
 /* Style the buttons inside the tab */
@@ -26,7 +27,7 @@
   
 /* Create an active/current tablink class */
 .tabitem-active {
-    background-color: rgba(90,138,144);
+    background-color: var(--title);
 }
 
 /* Style the tab content */
