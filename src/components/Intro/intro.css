@@ -26,6 +26,8 @@
     /* flex-direction: column; */
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: center;
 }
 
 .introPara{
@@ -39,6 +41,7 @@
 .column {
     float: none;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .left {
