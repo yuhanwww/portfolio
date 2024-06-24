@@ -2,7 +2,6 @@ import NavBar from "./components/NavBar/navbar";
 import Intro from "./components/Intro/intro";
 import Projects from "./components/Projects/projects";
 import Footer from "./components/Footer/footer";
-import './variables.css';
 
 function App() {
   return (

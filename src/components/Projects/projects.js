@@ -27,7 +27,7 @@ const Projects = () => {
   return (
     <section id="projects">
         <h2 className="projectsTitle">Projects</h2>
-        <span className="projectsDescription">I enjoy exploring the visual elements that improve the overall experiences</span>
+        {/* <span className="projectsDescription">I enjoy exploring the visual elements that improve the overall experiences</span> */}
         <div className="projectcards">
           {projects.map((project, index) => (
             <ProjectCard 

@@ -13,3 +13,16 @@ body {
     overflow-y: scroll;
     font-family:var(--text-font-content);
 }
+
+:root {
+    --bg: rgb(241,240,235); /*canvas*/
+    --text: rgb(75,71,63); /*dark grey*/
+    --title: rgb(238, 183, 19); /*yellow*/
+    --title-half: rgba(238, 183, 19,0.5); /*yellow*/
+    --highlight: rgb(241,60,31); /*red*/
+    --section: rgb(64,86,161); /*blue*/
+    --decoration: rgb(148,136,0); /*green brown*/
+    --other: rgb(28,87,43); /*dark green*/
+    --text-font-title: "Comfortaa", sans-serif;
+    --text-font-content: "Calibri",sans-serif;
+}

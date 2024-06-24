@@ -19,6 +19,9 @@ const ProjectCard = ({ image, title, description, link }) => {
             borderStyle: 'solid',
             display:'flex',
             padding: '12px',
+            ":hover": {
+                boxShadow: 6,
+            },
         }}
     >
     <CardMedia

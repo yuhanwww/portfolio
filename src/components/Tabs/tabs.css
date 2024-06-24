@@ -21,9 +21,9 @@
 }
   
 /* Change background color of buttons on hover */
-/* .tablist:hover {
-    background-color: rgba(90, 133, 144, 0.245);
-} */
+.tabitem:hover {
+    background-color: var(--title-half);
+}
   
 /* Create an active/current tablink class */
 .tabitem-active {

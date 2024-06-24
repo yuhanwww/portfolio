@@ -25,6 +25,7 @@ const Intro = () => {
       <div className="introContent">
         <div className="column left">
           <img src={selfie} alt="profile" className='introImg'/>
+          <h3 className="hi">Hi, I'm Yuhan Wang</h3>
           <div className="socialIcons">
             <Link type='email' className="socialIcon" onClick={() => { window.location.href = 'mailto:ywang70@smith.edu'; } }><img src={emailIcon} alt='email' className="socialIconImg" /></Link>
             <Link type='linkedin' className="socialIcon" onClick={() => window.open('https://www.linkedin.com/in/yuhan-wang-yw/', '_blank', 'noopener,noreferrer')}><img src={linkedinIcon} alt='LinkedIn'className="socialIconImg" /></Link>
