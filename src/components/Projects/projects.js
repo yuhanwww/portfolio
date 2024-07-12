@@ -26,19 +26,18 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects">
-        <h2 className="projectsTitle">Projects</h2>
-        {/* <span className="projectsDescription">I enjoy exploring the visual elements that improve the overall experiences</span> */}
-        <div className="projectcards">
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={index}
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-            />
-          ))}
-        </div>
+      <h2 className="projectsTitle">Projects</h2>
+      <div className="projectcards">
+        {projects.map((project, index) => (
+          <ProjectCard 
+            key={index}
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            link={project.link}
+          />
+        ))}
+      </div>
     </section>
   )
 }

@@ -11,16 +11,18 @@ const ProjectCard = ({ image, title, description, link }) => {
         sx={{ 
             maxWidth: '1000px', 
             margin: 'auto', 
-            mt: 2, 
             backgroundColor: 'transparent', 
-            borderColor: 'rgb(64,86,161)', 
-            borderWidth: '2px', 
-            borderRadius: '20px',
-            borderStyle: 'solid',
+            borderColor: 'transparent', 
+            // borderWidth: '2px', 
+            // borderRadius: '20px',
+            // borderStyle: 'solid',
             display:'flex',
             padding: '12px',
             ":hover": {
-                boxShadow: 6,
+                borderColor: 'rgb(64,86,161)', 
+                borderWidth: '3px', 
+                borderRadius: '20px',
+                borderStyle: 'solid',
             },
         }}
     >
@@ -32,7 +34,8 @@ const ProjectCard = ({ image, title, description, link }) => {
     />
     <Box
         sx={{ display: "flex", flexDirection: "column", borderRadius: "16px" }}
-    ></Box>
+    >
+    </Box>
     <CardContent sx={{ alignContent: 'center', maxWidth: '50vw', color:'var(--vext)'}}>
         <Typography gutterBottom variant="h5" component="div" >
             {title}

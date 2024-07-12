@@ -14,12 +14,6 @@ import cvIcon from '../../assets/icons/cvIcon.svg';
 import Pdf from '../../assets/CV_Yuhan_Wang.pdf';
 
 const Intro = () => {
-  const [value, setValue] = useState('1');
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
     <section id="intro">
       <div className="introContent">
